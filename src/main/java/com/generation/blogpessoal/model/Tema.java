@@ -1,4 +1,4 @@
-﻿package com.generation.blogpessoal.model;
+package com.generation.blogpessoal.model;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class Tema {
 	/* Relacionamento*/
 	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "tema", cascade = CascadeType.REMOVE)
-	@JsonIgnoreProperties("tema")
+	@JsonIgnoreProperties(value = "tema", allowSetters = true)
 	private List<Postagem> postagem;
 	
 	public Long getId() {

@@ -37,11 +37,11 @@ public class Postagem {
 	/* Relacionamento*/
 	
 	@ManyToOne
-	@JsonIgnoreProperties("postagem")
+	@JsonIgnoreProperties(value = "postagem")
 	private Tema tema;
 	
 	@ManyToOne
-	@JsonIgnoreProperties("postagem")
+	@JsonIgnoreProperties(value = "postagem")
 	private Usuario usuario;
 	
 	public Long getId() {
